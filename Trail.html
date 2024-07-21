@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="trail.css" />
     <link rel="stylesheet" href="glass.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +13,32 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-links");
+            const icon = document.querySelector(".hamburger-icon");
+            menu.classList.toggle("open");
+            icon.classList.toggle("open");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.project-box').forEach(container => {
+                const video = container.querySelector('.project-video');
+                if (video) {
+                    container.addEventListener('mouseenter', () => {
+                        video.play();
+                    });
+                    container.addEventListener('mouseleave', () => {
+                        video.pause();
+                        video.currentTime = 0; // Reset video to start
+                    });
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -30,55 +55,101 @@
         </nav>
     </div>
     <section id="profile">
-		<div class="section__pic-container">
-			<img src="./assets/LUFFY_PROFILE.jpg" alt="Monkey D Luffy" />
-		</div>
-		<div class="section__text">
-			<p class="section__text__p1">Hello, I'm</p>
-			<h1 class="title">Monkey D Luffy!</h1>
-			<p class="section__text__p2">MERN Stack Developer</p>
-			<div class="btn-container">
-				<button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
-					Download CV
-				</button>
-				<button class="btn btn-color-2" onclick="location.href='./#contact'">
-					Contact Info
-				</button>
-			</div>
-			<div id="socials-container">
-				<img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-					onclick="location.href='https://linkedin.com/'" />
-				<img src="./assets/github.png" alt="My Github profile" class="icon"
-					onclick="location.href='https://github.com/'" />
-			</div>
-		</div>
-	</section>
-    <!-- <div class="card" role="region" aria-labelledby="card-title">
-        <h1 id="card-title" class="card-title">Glassmorphism UI Card</h1>
-        <form role="search" aria-label="Champ de recherche">
-            <div class="search-container">
-                <label for="search-input" class="sr-only">Search</label>
-                <input type="text" id="search-input" placeholder="Search" aria-label="Champ de recherche" />
-                <div class="icon-container">
-                    <i class="fas fa-search search-icon" aria-hidden="true"></i>
-                </div>
-            </div>
-        </form>
-        <div class="group-bubble">
-            <div class="bubble">
-                <h2 class="bubble-title">Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend consequat dolor vel ornare.
-                    Ut mollis fringilla sapien quis porttitor.</p>
-            </div>
-            <div class="bubble">
-                <h2 class="bubble-title">Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend consequat dolor vel ornare.
-                    Ut mollis fringilla sapien quis porttitor.</p>
+        <div class="section__pic-container">
+            <img src="./assets/LUFFY_PROFILE.jpg" alt="Monkey D Luffy" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Monkey D Luffy!</h1>
+            <p class="section__text__p2">MERN Stack Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-2" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
             </div>
         </div>
-        <i class="fa-solid fa-layer-group card-icon" aria-hidden="true"></i>
-        <button class="card-button">Start Now</button>
-    </div> -->
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="project-details-container">
+            <div class="project-containers">
+                <div class="project-box card-project">
+                    <div class="article-container">
+                        <h2 class="experience-sub-title project-title">Swiggy Clone</h2>
+                        <div class="btn-container">
+                            <a href="https://github.com/ChandrikaNarkedamilli/Swiggy-clone" title="CODE" target="_blank"
+                                class="glow-icon"><ion-icon size="large" name="logo-github"></ion-icon></a>
+                            <a href="https://swiggy-clone-xi-peach.vercel.app" target="_blank" title="LIVE"
+                                class="glow-icon"><ion-icon size="large" name="logo-apple-ar"></ion-icon></a>
+                        </div>
+                        <video class="project-video" loop muted>
+                            <source src="./assets/videos/swiggyclientapp.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="./assets/swiggyclient2.jpg" alt="Project 1" class="project-img" />
+                    </div>
+                </div>
+                <div class="project-box card-project">
+                    <div class="article-container">
+                        <h2 class="experience-sub-title project-title">IPL Website</h2>
+                        <div class="btn-container">
+                            <a href="https://github.com/ChandrikaNarkedamilli/IPL-Website" title="CODE" target="_blank"
+                                class="glow-icon"><ion-icon size="large" name="logo-github"></ion-icon></a>
+                            <a href="https://ipl-website.vercel.app" target="_blank" title="LIVE"
+                                class="glow-icon"><ion-icon size="large" name="logo-apple-ar"></ion-icon></a>
+                        </div>
+                        <video class="project-video" loop muted>
+                            <source src="./assets/videos/iplinfoapp.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="./assets/iplimg.jpg" alt="Project 2" class="project-img" />
+                    </div>
+                </div>
+            </div>
+            <div class="project-containers">
+                <div class="project-box card-project">
+                    <div class="article-container">
+                        <div style="display: flex;">
+                            <h2 class="experience-sub-title project-title">Swiggy Vendor Dashboard</h2>
+                            <div class="btn-container">
+                                <a href="https://github.com/ChandrikaNarkedamilli/Swiggy-Vendor-Dashboard" title="CODE"
+                                    target="_blank" class="glow-icon"><ion-icon size="large"
+                                        name="logo-github"></ion-icon></a>
+                                <a href="https://swiggy-vendor-dashboard.vercel.app/" target="_blank" title="LIVE"
+                                    class="glow-icon"><ion-icon size="large" name="logo-apple-ar"></ion-icon></a>
+                            </div>
+                        </div>
+                        <video class="project-video" loop muted>
+                            <source src="./assets/videos/swiggyvendorapp.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="./assets/swiggyvendorimg2.jpg" alt="Project 3" class="project-img" />
+                    </div>
+                </div>
+                <div class="project-box card-project">
+                    <div class="article-container">
+                        <h2 class="experience-sub-title project-title">Myntra</h2>
+                        <div class="btn-container">
+                            <a href="https://github.com/ChandrikaNarkedamilli/Myntra-App" title="CODE" target="_blank"
+                                class="glow-icon"><ion-icon size="large" name="logo-github"></ion-icon></a>
+                            <a href="https://myntra-app-rho.vercel.app/" target="_blank" title="LIVE"
+                                class="glow-icon"><ion-icon size="large" name="logo-apple-ar"></ion-icon></a>
+                        </div>
+                        <video class="project-video" loop muted>
+                            <source src="./assets/videos/myntra.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="./assets/myntraimg.jpg" alt="Project 3" class="project-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
 </body>
 <footer>
 </footer>
