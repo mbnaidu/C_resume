@@ -543,3 +543,8 @@ h1.card-title {
     font-size: 1.45em;
     text-align: center;
 }
+.footer-setup {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
