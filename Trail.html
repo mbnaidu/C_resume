@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="trail.css" />
+    <link rel="stylesheet" href="glass.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card-header" role="region" aria-labelledby="card-title">
+        <nav id="desktop-nav">
+            <div class="logo"><a href="#" onclick="toggleMenu()">Monkey D Luffy</a></div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#projects" class="nav-tag">Projects</a></li>
+                    <li><a href="#experience" class="nav-tag">Experience</a></li>
+                    <li><a href="#contact" class="nav-tag">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <section id="profile">
+		<div class="section__pic-container">
+			<img src="./assets/LUFFY_PROFILE.jpg" alt="Monkey D Luffy" />
+		</div>
+		<div class="section__text">
+			<p class="section__text__p1">Hello, I'm</p>
+			<h1 class="title">Monkey D Luffy!</h1>
+			<p class="section__text__p2">MERN Stack Developer</p>
+			<div class="btn-container">
+				<button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+					Download CV
+				</button>
+				<button class="btn btn-color-2" onclick="location.href='./#contact'">
+					Contact Info
+				</button>
+			</div>
+			<div id="socials-container">
+				<img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+					onclick="location.href='https://linkedin.com/'" />
+				<img src="./assets/github.png" alt="My Github profile" class="icon"
+					onclick="location.href='https://github.com/'" />
+			</div>
+		</div>
+	</section>
+    <!-- <div class="card" role="region" aria-labelledby="card-title">
+        <h1 id="card-title" class="card-title">Glassmorphism UI Card</h1>
+        <form role="search" aria-label="Champ de recherche">
+            <div class="search-container">
+                <label for="search-input" class="sr-only">Search</label>
+                <input type="text" id="search-input" placeholder="Search" aria-label="Champ de recherche" />
+                <div class="icon-container">
+                    <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        </form>
+        <div class="group-bubble">
+            <div class="bubble">
+                <h2 class="bubble-title">Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend consequat dolor vel ornare.
+                    Ut mollis fringilla sapien quis porttitor.</p>
+            </div>
+            <div class="bubble">
+                <h2 class="bubble-title">Lorem Ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend consequat dolor vel ornare.
+                    Ut mollis fringilla sapien quis porttitor.</p>
+            </div>
+        </div>
+        <i class="fa-solid fa-layer-group card-icon" aria-hidden="true"></i>
+        <button class="card-button">Start Now</button>
+    </div> -->
+</body>
+<footer>
+</footer>
+
+</html>
