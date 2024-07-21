@@ -7,6 +7,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>My Portfolio</title>
 	<link rel="stylesheet" href="style.css" />
+
+	<script>
+		function toggleMenu() {
+			const menu = document.querySelector(".menu-links");
+			const icon = document.querySelector(".hamburger-icon");
+			menu.classList.toggle("open");
+			icon.classList.toggle("open");
+		}
+
+		document.addEventListener("DOMContentLoaded", () => {
+			document.querySelectorAll('.project-box').forEach(container => {
+				const video = container.querySelector('.project-video');
+				if (video) {
+					container.addEventListener('mouseenter', () => {
+						video.play();
+					});
+					container.addEventListener('mouseleave', () => {
+						video.pause();
+						video.currentTime = 0; // Reset video to start
+					});
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -154,7 +178,7 @@
 		<img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
 	</section>
 
-	<section id="skills">
+	<section id="experience">
 		<p class="section__text__p1">Explore My</p>
 		<h1 class="title">Skills</h1>
 
@@ -339,7 +363,6 @@
 		</nav>
 		<p>Copyright &#169; 2024 chandrika. All Rights Reserved.</p>
 	</footer>
-	<script src="script.js"></script>
 </body>
 
 </html>
