@@ -1,0 +1,12 @@
+{
+  "name": "html-css-js-portfolio-tutorial-2-main",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "script.js",
+  "scripts": {
+    "start": "npm run server.js",
+    "test": "npm test"
+  },
+  "author": "chandrika",
+  "license": "ISC"
+}
